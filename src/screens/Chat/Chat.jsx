@@ -22,7 +22,9 @@ const Chat = () => {
     socket = io(ENDPOINT);
     setUserName(userName);
     setRoom(room);
-    socket.emit("join", { userName, room }, () => {});
+    socket.emit("join", { userName, room }, (error) => {
+      if (error) alert(error);
+    });
   }, [ENDPOINT, window.location.search]);
 
   useEffect(() => {

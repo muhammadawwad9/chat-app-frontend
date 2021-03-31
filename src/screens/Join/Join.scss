@@ -9,9 +9,9 @@
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    row-gap: 15px;
+    height: 240px;
 
     h1 {
       color: #fff;

@@ -15,6 +15,7 @@ const Chat = () => {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
   const [onlineUsers, setOnlineUsers] = useState([]);
+
   //useEffect
   useEffect(() => {
     const { userName, room } = queryString.parse(window.location.search);

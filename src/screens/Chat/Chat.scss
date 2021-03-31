@@ -13,6 +13,7 @@
     position: relative;
     @include small-screen {
       width: 100%;
+      min-width: 0;
       height: 100%;
     }
     background-color: #fff;

@@ -1,0 +1,30 @@
+.InfoBar {
+  color: #fff;
+  font-size: 25px;
+  background-color: rgb(61, 61, 233);
+  min-height: 60px;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  .left-side {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    .online-icon {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: rgb(19, 200, 19);
+    }
+  }
+
+  .right-side {
+    &::before {
+      content: "\2716";
+      cursor: pointer;
+    }
+  }
+}

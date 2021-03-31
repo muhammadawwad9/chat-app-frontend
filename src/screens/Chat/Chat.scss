@@ -36,12 +36,12 @@
       }
     }
     .send-area {
+      width: 100%;
       display: flex;
       justify-content: space-between;
       input,
       button {
         font-size: 15px;
-        padding: 10px;
         outline: none;
         border: none;
         border-top: 1px solid;
@@ -51,14 +51,11 @@
         width: 100%;
       }
       button {
-        height: 60px;
-        width: 100px;
         cursor: pointer;
         background-color: rgb(69, 69, 243);
         color: #fff;
         font-weight: bold;
         border: none;
-        height: 100%;
       }
     }
   }

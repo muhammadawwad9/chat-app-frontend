@@ -28,6 +28,11 @@ const Chat = () => {
         window.location = "/";
       }
     });
+
+    return () => {
+      socket.emit("disconnect");
+      socket.off();
+    };
   }, [ENDPOINT, window.location.search]);
 
   useEffect(() => {

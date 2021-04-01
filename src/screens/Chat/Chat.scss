@@ -63,16 +63,19 @@
     @include small-screen {
       display: none;
     }
+    font-size: 60px;
+    text-align: center;
     margin-top: 50px;
     color: #fff;
     padding-bottom: 12px;
-    text-align: center;
   }
 
   .online-users {
     @include small-screen {
       display: none;
     }
+    font-weight: bold;
+    font-size: 25px;
     width: 38%;
     max-height: 200px;
     margin: auto;

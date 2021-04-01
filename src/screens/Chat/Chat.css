@@ -1,0 +1,144 @@
+.Chat {
+  background-color: #101010;
+  height: 100vh;
+  padding: 10px;
+  padding-top: 50px;
+  overflow: auto;
+}
+
+@media only screen and (max-width: 540px) {
+  .Chat {
+    padding: 0px;
+  }
+}
+
+.Chat .container {
+  position: relative;
+  background-color: #fff;
+  width: 38%;
+  max-width: 720px;
+  min-width: 510px;
+  height: 60%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media only screen and (max-width: 540px) {
+  .Chat .container {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+  }
+}
+
+.Chat .container .inner-container {
+  padding-top: 45px;
+  margin-top: 0px !important;
+  overflow: auto;
+  word-wrap: break-word;
+}
+
+.Chat .container .inner-container .chat-log {
+  padding: 25px 30px 0px 30px;
+}
+
+.Chat .container .send-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Chat .container .send-area input,
+.Chat .container .send-area button {
+  font-size: 15px;
+  outline: none;
+  border: none;
+  border-top: 1px solid;
+}
+
+.Chat .container .send-area input {
+  border-radius: 0;
+  width: 80%;
+  padding: 30px;
+}
+
+.Chat .container .send-area button {
+  cursor: pointer;
+  background-color: #4545f3;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  width: 20%;
+}
+
+.Chat h1 {
+  font-size: 60px;
+  text-align: center;
+  margin-top: 50px;
+  color: #fff;
+  padding-bottom: 12px;
+}
+
+@media only screen and (max-width: 540px) {
+  .Chat h1 {
+    display: none;
+  }
+}
+
+.Chat .online-users {
+  font-weight: bold;
+  font-size: 25px;
+  width: 38%;
+  max-height: 200px;
+  margin: auto;
+  overflow: auto;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 7px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+}
+
+@media only screen and (max-width: 540px) {
+  .Chat .online-users {
+    display: none;
+  }
+}
+
+.Chat .online-users li {
+  list-style: none;
+}
+
+.Chat .online-users .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 7px;
+          column-gap: 7px;
+}
+
+.Chat .online-users .online-icon {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #13c813;
+}
+/*# sourceMappingURL=Chat.css.map */

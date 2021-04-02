@@ -13,7 +13,7 @@ const Message = ({ message, userName }) => {
     return (
       <div className="my-message">
         <div className="userName">{message.userName}</div>
-        <div className="t">{ReactEmoji.emojify(message.text)}</div>
+        <div className="text">{ReactEmoji.emojify(message.text)}</div>
       </div>
     );
   }

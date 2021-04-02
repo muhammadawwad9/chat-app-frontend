@@ -39,5 +39,6 @@
 .InfoBar .right-side::before {
   content: "\2716";
   cursor: pointer;
+  color: #fff;
 }
 /*# sourceMappingURL=InfoBar.css.map */

@@ -59,7 +59,13 @@ const Chat = () => {
         <div className="inner-container">
           <div className="chat-log">
             {messages.map((message, i) => {
-              return <Message key={i} message={message} userName={userName} />;
+              return (
+                <Message
+                  key={i}
+                  message={message}
+                  userName={userName.toLowerCase().trim()}
+                />
+              );
             })}
           </div>
         </div>

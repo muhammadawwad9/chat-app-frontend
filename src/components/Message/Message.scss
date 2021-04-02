@@ -21,11 +21,16 @@
 }
 
 .justify-start {
+  margin-bottom: 10px;
+
+  display: flex;
+  align-items: center;
   justify-content: flex-start;
   .text {
-    background-color: #000;
+    background-color: #f3f3f3;
     padding: 20px;
     border-radius: 20px;
+    max-width: 70%;
     color: #000;
   }
 

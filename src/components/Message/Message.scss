@@ -1,17 +1,10 @@
 .Message {
   margin-bottom: 10px;
   display: flex;
-  -ms-box-orient: horizontal;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -moz-flex;
-  display: -webkit-flex;
+
   align-items: center;
   justify-content: flex-end;
-  -webkit-justify-content: flex-end;
 
-  flex-shrink: 1;
   .text {
     background-color: rgb(63, 63, 238);
     color: #fff;
@@ -30,7 +23,7 @@
 .justify-start {
   justify-content: flex-start;
   .text {
-    background-color: #f3f3f3;
+    background-color: #000;
     padding: 20px;
     border-radius: 20px;
     color: #000;

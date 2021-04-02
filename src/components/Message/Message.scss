@@ -3,13 +3,13 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  column-gap: 5px;
   .text {
     background-color: rgb(63, 63, 238);
     color: #fff;
     padding: 20px;
     border-radius: 20px;
     max-width: 70%;
+    margin-left: 5px;
   }
 
   .userName {
@@ -18,17 +18,18 @@
   }
 }
 
-// .justify-start {
-//   justify-content: flex-start;
+.justify-start {
+  justify-content: flex-start;
+  .text {
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-radius: 20px;
+    color: #000;
+  }
 
-//   .text {
-//     background-color: #f3f3f3;
-//     padding: 20px;
-//     border-radius: 20px;
-//     color: #000;
-//   }
-
-//   .userName {
-//     color: #828282;
-//   }
-// }
+  .userName {
+    color: #828282;
+    order: 1;
+    margin-left: 5px;
+  }
+}

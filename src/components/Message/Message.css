@@ -9,8 +9,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-column-gap: 5px;
-          column-gap: 5px;
 }
 
 .Message .text {
@@ -19,10 +17,32 @@
   padding: 20px;
   border-radius: 20px;
   max-width: 70%;
+  margin-left: 5px;
 }
 
 .Message .userName {
   color: #828282;
   max-width: 30%;
+}
+
+.justify-start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.justify-start .text {
+  background-color: #f3f3f3;
+  padding: 20px;
+  border-radius: 20px;
+  color: #000;
+}
+
+.justify-start .userName {
+  color: #828282;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  margin-left: 5px;
 }
 /*# sourceMappingURL=Message.css.map */

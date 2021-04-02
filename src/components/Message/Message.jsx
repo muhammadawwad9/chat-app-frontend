@@ -5,7 +5,7 @@ const Message = ({ message, userName }) => {
   return (
     <div
       className={`Message ${
-        message.userName != userName ? "justify-start" : null
+        message.userName != userName ? "justify-start" : ""
       }`}
     >
       <div className="userName">{message.userName}</div>

@@ -1,0 +1,42 @@
+.InfoBar {
+  color: #fff;
+  font-size: 25px;
+  background-color: #3d3de9;
+  height: 60px;
+  position: absolute;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 20px;
+}
+
+.InfoBar .left-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 65px;
+}
+
+.InfoBar .left-side .online-icon {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #13c813;
+  margin-right: 10px;
+}
+
+.InfoBar .right-side::before {
+  content: "\2716";
+  cursor: pointer;
+}
+/*# sourceMappingURL=InfoBar.css.map */

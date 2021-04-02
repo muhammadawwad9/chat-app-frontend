@@ -1,17 +1,20 @@
-.my-message {
+.Message {
   margin-bottom: 10px;
+  border: 2px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
 }
 
-.my-message .text {
+.Message .text {
   background-color: #3f3fee;
   color: #fff;
   padding: 20px;
@@ -20,32 +23,28 @@
   margin-left: 5px;
 }
 
-.my-message .userName {
+.Message .userName {
   color: #828282;
   max-width: 30%;
 }
 
-.member-message {
-  margin-bottom: 10px;
+.justify-start {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-.member-message .text {
+.justify-start .text {
   background-color: #f3f3f3;
   padding: 20px;
   border-radius: 20px;
   color: #000;
 }
 
-.member-message .userName {
+.justify-start .userName {
   color: #828282;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;

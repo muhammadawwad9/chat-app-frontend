@@ -1,8 +1,10 @@
-.my-message {
+.Message {
   margin-bottom: 10px;
+  border: 2px solid red;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 1;
   .text {
     background-color: rgb(63, 63, 238);
     color: #fff;
@@ -18,11 +20,9 @@
   }
 }
 
-.member-message {
-  margin-bottom: 10px;
+.justify-start {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
   .text {
     background-color: #f3f3f3;
     padding: 20px;

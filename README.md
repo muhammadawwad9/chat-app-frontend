@@ -1,4 +1,4 @@
-<h1><b>chat-app-frontend</b></h1>
+<h1><b>Chat App</b></h1>
 <h3><b>Description:</b></h3>
 <p>
     In this app, all you need is to enter a username and a room, and start chatting with friends in the same room, enjoy!
@@ -13,7 +13,7 @@
 
 
   
-  <h3><b>Technologies used:</b></h3>
+  <h3><b>Technologies used (Frontend):</b></h3>
   
   * HTML
   * SASS

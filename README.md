@@ -1,6 +1,8 @@
 <h1><b>Chat App</b></h1>
 
-
+* <a>Description</a>
+* <a>Screenshots</a>
+* <a>Technologies used (Frontend)</a>
 * <a href="#backend">View the backend repository</a>
 
 <h3><b>Description:</b></h3>

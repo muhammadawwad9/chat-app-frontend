@@ -1,6 +1,6 @@
 <h1><b>Chat App</b></h1>
 
-<h3><b>Description:</b></h3>
+<h1><b>Description:</b></h1>
 <p>
     In this app, all you need is to enter a username and a room, and start chatting with friends in the same room, enjoy!
   </p>

@@ -1,6 +1,6 @@
 # chat-app-frontend
 
-<h1 style="align:center"><a href="https://festive-saha-d99c2d.netlify.app/">Start Chatting</a></h1>
+<h1 style="text-align:center"><a href="https://festive-saha-d99c2d.netlify.app/">Start Chatting</a></h1>
 
 ### Description
 <p>

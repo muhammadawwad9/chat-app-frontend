@@ -6,10 +6,8 @@
   </p>
 <h1 align="center"><a href="https://festive-saha-d99c2d.netlify.app/">Start Chatting</a></h1>
 <h3><b>Screenshots for the app:</b></h3>
-<p align="center">
     <img  width="200" src="https://github.com/muhammadawwad9/chat-app-frontend/blob/main/public/images/screenshot2.JPG"/>
     <img src="https://github.com/muhammadawwad9/chat-app-frontend/blob/main/public/images/screenshot1.png"/>
-</p>
 
   
   <h3><b>Technologies used (Frontend):</b></h3>

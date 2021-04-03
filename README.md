@@ -5,7 +5,7 @@
 
 
 <p>
-    In this app, all you need is to enter a username and a room, and start chatting with friends in the same room, enjoy!
+    In this app, all you need is to enter a username and a room, and start chatting with friends in that room, enjoy!
   </p>
   
   

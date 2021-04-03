@@ -7,7 +7,7 @@ import InfoBar from "../../components/InfoBar/InfoBar";
 import Message from "../../components/Message/Message";
 
 let socket;
-let ENDPOINT = "//chat-app-websockets-backend.herokuapp.com/";
+let ENDPOINT = "chat-app-websockets-backend.herokuapp.com/";
 const Chat = () => {
   //states
   const [userName, setUserName] = useState("");

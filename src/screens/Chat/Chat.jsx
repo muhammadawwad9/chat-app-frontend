@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import queryString from "query-string";
 import io from "socket.io-client";
 import "./Chat.scss";
@@ -38,6 +38,7 @@ const Chat = () => {
   useEffect(() => {
     socket.on("message", (message) => {
       setMessages((prev) => [...prev].concat([message]));
+      scrollToHere.current.scrollIntoView();
     });
 
     socket.on("roomData", ({ users }) => {
@@ -51,6 +52,8 @@ const Chat = () => {
     if (message) socket.emit("sendMessage", message, () => setMessage(""));
   };
 
+  //useRef
+  let scrollToHere = useRef();
   return (
     <div className="Chat">
       <div className="container">
@@ -67,6 +70,7 @@ const Chat = () => {
               );
             })}
           </div>
+          <div id="scroll-here" ref={scrollToHere}></div>
         </div>
         <div className="send-area">
           <input

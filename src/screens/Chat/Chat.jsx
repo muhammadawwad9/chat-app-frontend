@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import queryString from "query-string";
 import io from "socket.io-client";
 import "./Chat.scss";
+import ScrollToBottom from "react-scroll-to-bottom";
+
 //components imports
 import InfoBar from "../../components/InfoBar/InfoBar";
 import Message from "../../components/Message/Message";
@@ -38,7 +40,6 @@ const Chat = () => {
   useEffect(() => {
     socket.on("message", (message) => {
       setMessages((prev) => [...prev].concat([message]));
-      scrollToHere.current.scrollIntoView();
     });
 
     socket.on("roomData", ({ users }) => {
@@ -54,11 +55,13 @@ const Chat = () => {
 
   //useRef
   let scrollToHere = useRef();
+  let innerContainer = useRef();
+
   return (
     <div className="Chat">
       <div className="container">
         <InfoBar room={room} />
-        <div className="inner-container">
+        <ScrollToBottom className="inner-container" ref={innerContainer}>
           <div className="chat-log">
             {messages.map((message, i) => {
               return (
@@ -70,8 +73,8 @@ const Chat = () => {
               );
             })}
           </div>
-          <div id="scroll-here" ref={scrollToHere}></div>
-        </div>
+          <div ref={scrollToHere}></div>
+        </ScrollToBottom>
         <div className="send-area">
           <input
             type="text"

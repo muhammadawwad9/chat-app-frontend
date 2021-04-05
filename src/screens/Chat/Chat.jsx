@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import queryString from "query-string";
 import io from "socket.io-client";
 import "./Chat.scss";
@@ -53,15 +53,11 @@ const Chat = () => {
     if (message) socket.emit("sendMessage", message, () => setMessage(""));
   };
 
-  //useRef
-  let scrollToHere = useRef();
-  let innerContainer = useRef();
-
   return (
     <div className="Chat">
       <div className="container">
         <InfoBar room={room} />
-        <ScrollToBottom className="inner-container" ref={innerContainer}>
+        <ScrollToBottom className="inner-container">
           <div className="chat-log">
             {messages.map((message, i) => {
               return (
@@ -73,7 +69,6 @@ const Chat = () => {
               );
             })}
           </div>
-          <div ref={scrollToHere}></div>
         </ScrollToBottom>
         <div className="send-area">
           <input

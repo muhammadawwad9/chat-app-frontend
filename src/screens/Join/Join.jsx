@@ -38,7 +38,7 @@ const Join = () => {
         />
         <input
           type="text"
-          placeholder="school trip 587"
+          placeholder="Room"
           onChange={(e) => setRoom(e.target.value)}
           autoComplete="off"
         />

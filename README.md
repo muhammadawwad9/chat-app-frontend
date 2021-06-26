@@ -19,8 +19,8 @@
 <h3 id="screenshots"><b>Screenshots for the app:</b></h3>
 
 
-  <p align="center"><img   width="400px" src="https://github.com/muhammadawwad9/chat-app-frontend/blob/main/public/images/screenshot1.png"/></p>
-    <p align="center"><img  width="400px" src="https://github.com/muhammadawwad9/chat-app-frontend/blob/main/public/images/screenshot2.png"/></p>
+  <p align="center"><img   width="280px" src="https://github.com/muhammadawwad9/chat-app-frontend/blob/main/public/images/screenshot1.png"/></p>
+    <p align="center"><img  width="280px" src="https://github.com/muhammadawwad9/chat-app-frontend/blob/main/public/images/screenshot2.png"/></p>
 
 
   

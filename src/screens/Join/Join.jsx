@@ -21,6 +21,8 @@ const Join = () => {
     if (!userName || !room) return errorHandler(e, "Please Fill Up The Fields");
     else if (userName.length > 12 || userName.length < 4)
       return errorHandler(e, "Username must be between 4-12 characters");
+    else if (room.length > 16)
+      return errorHandler(e, "Room can be max 16 characters");
 
     history.push(`/chat?userName=${userName}&room=${room}`);
   };
@@ -41,6 +43,7 @@ const Join = () => {
           placeholder="Room"
           onChange={(e) => setRoom(e.target.value)}
           autoComplete="off"
+          maxLength="16"
         />
 
         <button type="submit" onClick={(e) => checkFields(userName, room, e)}>

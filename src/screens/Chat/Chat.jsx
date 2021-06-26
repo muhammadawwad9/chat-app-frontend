@@ -11,7 +11,6 @@ import Message from "../../components/Message/Message";
 
 let socket;
 let ENDPOINT = "chat-app-websockets-backend.herokuapp.com/";
-// let ENDPOINT = "http://localhost:4000/";
 
 const Chat = () => {
   //states

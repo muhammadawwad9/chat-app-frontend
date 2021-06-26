@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react";
+import { Link, useHistory } from "react-router-dom";
 import "./Join.scss";
 
 const Join = () => {
@@ -7,11 +7,22 @@ const Join = () => {
   const [userName, setUserName] = useState("");
   const [room, setRoom] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const history = useHistory();
 
   //function
-  const errorHandler = (e) => {
+  const errorHandler = (e, err) => {
     e.preventDefault();
-    setErrorMessage("Please Fill Up The Fields");
+    setErrorMessage(err);
+  };
+
+  const checkFields = (userName, room, e) => {
+    userName = userName.trim().toLowerCase();
+    room = room.trim().toLowerCase();
+    if (!userName || !room) return errorHandler(e, "Please Fill Up The Fields");
+    else if (userName.length > 12 || userName.length < 4)
+      return errorHandler(e, "Username must be between 4-12 characters");
+
+    history.push(`/chat?userName=${userName}&room=${room}`);
   };
 
   return (
@@ -30,14 +41,12 @@ const Join = () => {
           onChange={(e) => setRoom(e.target.value)}
           autoComplete="off"
         />
-        <Link
-          onClick={(e) => (!userName || !room ? errorHandler(e) : null)}
-          to={`/chat?userName=${userName}&room=${room}`}
-        >
-          <button type="submit">Enter Room</button>
-        </Link>
-        <div className="error-message">{errorMessage}</div>
+
+        <button type="submit" onClick={(e) => checkFields(userName, room, e)}>
+          Enter Room
+        </button>
       </div>
+      <div className="error-message">{errorMessage}</div>
     </div>
   );
 };

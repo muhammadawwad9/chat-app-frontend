@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import queryString from "query-string";
 import io from "socket.io-client";
 import "./Chat.scss";
@@ -10,6 +11,7 @@ import Message from "../../components/Message/Message";
 
 let socket;
 let ENDPOINT = "chat-app-websockets-backend.herokuapp.com/";
+
 const Chat = () => {
   //states
   const [userName, setUserName] = useState("");
@@ -17,6 +19,8 @@ const Chat = () => {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
   const [onlineUsers, setOnlineUsers] = useState([]);
+  const [connecting, setConnecting] = useState(true);
+  const history = useHistory();
 
   //useEffect
   useEffect(() => {
@@ -24,21 +28,30 @@ const Chat = () => {
     socket = io(ENDPOINT);
     setUserName(userName);
     setRoom(room);
+
     socket.emit("join", { userName, room }, (error) => {
       if (error) {
         alert(error);
-        window.location = "/";
+        history.push("/");
       }
     });
 
     return () => {
-      socket.emit("disconnect");
+      socket.emit("disconnection");
       socket.off();
     };
-  }, [ENDPOINT, window.location.search]);
+  }, [ENDPOINT, history.location.pathname]);
+
+  useEffect(() => {
+    if (!history.location.pathname.startsWith("/chat")) {
+      socket.emit("disconnection");
+      socket.off();
+    }
+  }, [history.location.pathname]);
 
   useEffect(() => {
     socket.on("message", (message) => {
+      setConnecting(false);
       setMessages((prev) => [...prev].concat([message]));
     });
 
@@ -59,26 +72,33 @@ const Chat = () => {
         <InfoBar room={room} />
         <ScrollToBottom className="inner-container">
           <div className="chat-log">
-            {messages.map((message, i) => {
-              return (
-                <Message
-                  key={i}
-                  message={message}
-                  userName={userName.toLowerCase().trim()}
-                />
-              );
-            })}
+            {connecting ? (
+              <img src="/images/connecting.gif" />
+            ) : (
+              messages.map((message, i) => {
+                return (
+                  <Message
+                    key={i}
+                    message={message}
+                    userName={userName.toLowerCase().trim()}
+                  />
+                );
+              })
+            )}
           </div>
         </ScrollToBottom>
         <div className="send-area">
           <input
+            disabled={connecting}
             type="text"
             placeholder="Type a message..."
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             onKeyPress={(e) => (e.key == "Enter" ? sendMessage(e) : null)}
           />
-          <button onClick={(e) => sendMessage(e)}>Send</button>
+          <button onClick={(e) => sendMessage(e)} disabled={connecting}>
+            Send
+          </button>
         </div>
       </div>
       <h1>Online users:</h1>

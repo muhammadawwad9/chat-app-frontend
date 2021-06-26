@@ -3,3 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+button:disabled,
+input:disabled,
+textarea:disabled,
+div :disabled {
+  opacity: 0.4;
+  cursor: default;
+}

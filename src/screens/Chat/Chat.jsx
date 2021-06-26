@@ -10,7 +10,8 @@ import InfoBar from "../../components/InfoBar/InfoBar";
 import Message from "../../components/Message/Message";
 
 let socket;
-let ENDPOINT = "chat-app-websockets-backend.herokuapp.com/";
+// let ENDPOINT = "chat-app-websockets-backend.herokuapp.com/";
+let ENDPOINT = "http://localhost:4000/";
 
 const Chat = () => {
   //states
@@ -69,7 +70,7 @@ const Chat = () => {
   return (
     <div className="Chat">
       <div className="container">
-        <InfoBar room={room} />
+        <InfoBar room={room} onlineUsers={onlineUsers} />
         <ScrollToBottom className="inner-container">
           <div className="chat-log">
             {connecting ? (
@@ -100,17 +101,6 @@ const Chat = () => {
             Send
           </button>
         </div>
-      </div>
-      <h1>Online users:</h1>
-      <div className="online-users">
-        {onlineUsers.map((user, i) => {
-          return (
-            <div className="user" key={i}>
-              <div className="online-icon"></div>
-              <li>{user} </li>
-            </div>
-          );
-        })}
       </div>
     </div>
   );

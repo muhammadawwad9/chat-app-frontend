@@ -31,13 +31,14 @@ const Join = () => {
         <h1>Join</h1>
         <input
           type="text"
-          placeholder="Username"
+          placeholder="Choose a Username"
           onChange={(e) => setUserName(e.target.value)}
           autoComplete="off"
+          maxLength="12"
         />
         <input
           type="text"
-          placeholder="Room"
+          placeholder="school trip 587"
           onChange={(e) => setRoom(e.target.value)}
           autoComplete="off"
         />

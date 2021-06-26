@@ -71,36 +71,4 @@
     color: #fff;
     padding-bottom: 12px;
   }
-
-  .online-users {
-    @include small-screen {
-      display: none;
-    }
-    font-weight: bold;
-    font-size: 25px;
-    width: 38%;
-    max-height: 200px;
-    margin: auto;
-    overflow: auto;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    row-gap: 7px;
-    column-gap: 10px;
-
-    li {
-      list-style: none;
-    }
-    .user {
-      display: flex;
-      align-items: center;
-      column-gap: 7px;
-    }
-    .online-icon {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background-color: rgb(19, 200, 19);
-    }
-  }
 }

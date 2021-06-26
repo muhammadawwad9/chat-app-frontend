@@ -27,6 +27,8 @@ const Join = () => {
     history.push(`/chat?userName=${userName}&room=${room}`);
   };
 
+  const submitBtn = useRef(null);
+
   return (
     <div className="Join">
       <div className="details-section">
@@ -37,6 +39,9 @@ const Join = () => {
           onChange={(e) => setUserName(e.target.value)}
           autoComplete="off"
           maxLength="12"
+          onKeyDown={(e) =>
+            e.key == "Enter" ? submitBtn.current.click() : null
+          }
         />
         <input
           type="text"
@@ -44,9 +49,16 @@ const Join = () => {
           onChange={(e) => setRoom(e.target.value)}
           autoComplete="off"
           maxLength="16"
+          onKeyDown={(e) =>
+            e.key == "Enter" ? submitBtn.current.click() : null
+          }
         />
 
-        <button type="submit" onClick={(e) => checkFields(userName, room, e)}>
+        <button
+          type="submit"
+          onClick={(e) => checkFields(userName, room, e)}
+          ref={submitBtn}
+        >
           Enter Room
         </button>
       </div>

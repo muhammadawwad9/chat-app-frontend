@@ -31,6 +31,7 @@ const Join = () => {
 
   return (
     <div className="Join">
+      <h1>Online Chat Rooms</h1>
       <div className="details-section">
         <h1>Join</h1>
         <input
@@ -62,6 +63,8 @@ const Join = () => {
           Enter Room
         </button>
       </div>
+      <img src="/images/chatting.png" />
+
       <div className="error-message">{errorMessage}</div>
     </div>
   );

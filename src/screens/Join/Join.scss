@@ -8,18 +8,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 25px;
+  padding-top: 35px;
 
-  > img {
-    width: 360px;
-    position: absolute;
-    bottom: 50px;
-
-    @include small-screen {
-      width: 170px;
-      bottom: 20px;
-    }
-  }
   > h1 {
     color: rgb(58, 104, 242);
     font-style: italic;
@@ -45,6 +35,9 @@
       color: #fff;
       font-size: 50px;
       padding-top: 20px;
+      @include small-screen {
+        font-size: 42px;
+      }
     }
 
     input,

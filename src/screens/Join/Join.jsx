@@ -63,7 +63,6 @@ const Join = () => {
           Enter Room
         </button>
       </div>
-      <img src="/images/chatting.png" />
 
       <div className="error-message">{errorMessage}</div>
     </div>

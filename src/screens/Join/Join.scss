@@ -1,3 +1,5 @@
+@import "../../utils//media-queries.scss";
+
 .Join {
   height: 100vh;
   background-color: #101010;
@@ -6,11 +8,17 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 25px;
 
   > img {
-    width: 350px;
-    margin-top: 45px;
+    width: 360px;
+    position: absolute;
+    bottom: 50px;
+
+    @include small-screen {
+      width: 170px;
+      bottom: 20px;
+    }
   }
   > h1 {
     color: rgb(58, 104, 242);
@@ -20,13 +28,18 @@
     font-weight: normal;
     font-family: sans-serif;
     border-bottom: 1px solid rgb(58, 104, 242);
+    text-align: center;
+
+    @include small-screen {
+      font-size: 40px;
+    }
   }
   .details-section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 240px;
+    min-height: 240px;
 
     h1 {
       color: #fff;

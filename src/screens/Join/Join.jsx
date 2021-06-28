@@ -31,7 +31,7 @@ const Join = () => {
 
   return (
     <div className="Join">
-      <h1>Online Chat Rooms</h1>
+      <h1>Live Chat Rooms</h1>
       <div className="details-section">
         <h1>Join</h1>
         <input
